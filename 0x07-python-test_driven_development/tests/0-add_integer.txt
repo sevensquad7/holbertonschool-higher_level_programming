@@ -1,0 +1,72 @@
+=======================
+|  Test Add Integers  |
+=======================
+
+``0-add_integer()`` Return the addition of their args
+::
+
+Importing the function from the module:
+
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Checking regular addition:
+
+	>>> add_integer(5, 6)
+	11
+
+Checking positive with negative:
+
+	>>> add_integer(5, -9)
+	-4
+
+Checking negative with positive:
+
+	>>> add_integer(-4, 9)
+	5
+
+Checking float with int:
+
+	>>> add_integer(3.5, 8)
+	11
+
+Checking int with float:
+
+	>>> add_integer(2, 3.2)
+	5
+
+Checking both float:
+
+	>>> add_integer(3.23, 9.2)
+	12
+
+Checking for passed NaN:
+
+	>>> add_integer(float('NaN'), 0)
+	89
+
+Checking for passed NaN:
+
+	>>> add_integer(0,float('NaN'))
+	89
+
+Checking for passed zero:
+
+    >>> add_integer(0,0)
+    0
+
+Checking for passed one argument:
+
+    >>> add_integer(2)
+    100
+
+Checking for passed one argument zero:
+
+    >>> add_integer(0)
+    98
+
+Checking not argument:
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
