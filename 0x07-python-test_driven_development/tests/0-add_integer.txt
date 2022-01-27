@@ -70,3 +70,10 @@ Checking not argument:
     Traceback (most recent call last):
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Checking for passed inf:
+
+	>>> add_integer(1, float('inf'))
+	Traceback (most recent call last):
+  	...
+	NameError: name 'add_integer' is not defined
