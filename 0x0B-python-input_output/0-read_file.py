@@ -8,4 +8,4 @@ and prints it to stdout:
 def read_file(filename=""):
     """function that reads a text"""
     with open(filename, encoding="utf-8") as file:
-        print(line.read(), end="")
+        print(file.read(), end="")
