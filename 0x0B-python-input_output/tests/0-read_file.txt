@@ -1,0 +1,34 @@
+=======================
+|  Test Read File     |
+=======================
+
+``0-read_file()`` Return the addition of their args
+::
+
+Importing the function from the module:
+
+	>>> read_file = __import__('0-read_file').read_file
+
+Checking regular intruction:
+    >>> read_file("my_file_0.txt")
+    We offer a truly innovative approach to education:
+    focus on building reliable applications and scalable systems, take on real-world challenges, collaborate with your peers.
+
+    A school every software engineer would have dreamt of!
+
+    >>> read_file()
+    We offer a truly innovative approach to education:
+    focus on building reliable applications and scalable systems, take on real-world challenges, collaborate with your peers.
+
+    A school every software engineer would have dreamt of!
+
+    >>> read_file("")
+    We offer a truly innovative approach to education:
+    focus on building reliable applications and scalable systems, take on real-world challenges, collaborate with your peers.
+
+    A school every software engineer would have dreamt of!
+
+    >>> read_file(x)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'x' is not defined
