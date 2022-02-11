@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""define Rectangle"""
+'''define Rectangle'''
 
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """define class Rectangle"""
+    '''define class Rectangle'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """define contructor"""
+        '''define contructor'''
         self.width = width
         self.height = height
         self.x = x
@@ -18,7 +18,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """get width"""
+        '''get width'''
         return self.__width
 
     @width.setter
@@ -56,13 +56,14 @@ class Rectangle(Base):
         '''Set y'''
         self.__y = y
 
+
 def validator_integer(self, name, value, flag):
-    """validate integer"""
-    if type (value) in not int:
-        raise TypeError ("{} must be a integer".format(name))
+    '''validate integer'''
+    if type(value) in not int:
+        raise TypeError("{} must be a integer".format(name))
     if flag == 1:
-            if value <= 0:
-                raise ValueError("{} must be > 0".format(name))
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(name))
     if flag == 2:
-            if value < 0:
-                raise ValueError("{} must be >= 0".format(name))
+        if value < 0:
+            raise ValueError("{} must be >= 0".format(name))
