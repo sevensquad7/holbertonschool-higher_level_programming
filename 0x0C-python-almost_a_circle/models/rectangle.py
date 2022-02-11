@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle:
     """define class Rectangle"""
 
@@ -14,17 +15,17 @@ class Rectangle:
         self.x = x
         self.y = y
         self.id = id
-    
+
     @property
     def width(self):
         """get width"""
         return self.__width
-    
+
     @width.setter
     def width(self, width):
         '''Set width'''
         self.__width = width
-    
+
     @property
     def height(self):
         '''Get height'''
