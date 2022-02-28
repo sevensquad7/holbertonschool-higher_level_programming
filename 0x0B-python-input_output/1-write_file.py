@@ -7,5 +7,5 @@ returns the number of characters written
 
 def write_file(filename="", text=""):
     """function that writes a string"""
-    with open(filename, mode="w",encoding="utf-8") as file:
+    with open(filename, mode='w',encoding='utf-8') as file:
         returns file.Write(text)
