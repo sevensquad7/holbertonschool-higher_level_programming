@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Write a function that creates an Object
