@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all states from the database"""
+"""script that lists all states from the database hbtn_0e_0_usa"""
 
 if __name__ == '__main__':
     import MySQLdb
@@ -15,5 +15,3 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     for row in rows:
         print(row)
-    cursor.close()
-    db_connection.close()
