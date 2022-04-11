@@ -13,12 +13,12 @@ def mysqlconnect():
                                         passwd=sys.argv[2],
                                         db_connection=sys.argv[3])
     except:
-        print("Error while connecting to MySQL")
+        print("Can't connect to database")
         return 0
     print("Connected")
-    cursor = db_connection.cursor()
-    cursor.execute('SELECT * FROM states ORDER BY id ASC')
-    rows = cursor.fetchall()
+    cur = db_connection.cursor()
+    cur.execute('SELECT * FROM states ORDER BY id ASC')
+    rows = cur.fetchall()
     for row in rows:
         print(row)
     cursor.close()
