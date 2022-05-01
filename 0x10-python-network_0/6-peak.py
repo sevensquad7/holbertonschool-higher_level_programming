@@ -10,12 +10,12 @@ def find_peak(inArray):
     """
     if not inArray:
         return None
-    newArray=[]
+    newArray = []
     lenArray = len(inArray)
 
-    for i in range(1,lenArray-1):
+    for i in range(1, lenArray-1):
         newArray.append(inArray[i])
-    searchPeak=newArray[0]
+    searchPeak = newArray[0]
     for j in range(len(newArray)):
         if newArray[j] >= searchPeak:
             searchPeak = newArray[j]
