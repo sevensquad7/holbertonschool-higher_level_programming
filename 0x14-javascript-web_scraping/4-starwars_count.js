@@ -1,19 +1,17 @@
 #!/usr/bin/node
 const axios = require('axios');
-const url = process.argv[2];
-
-axios(url, { json: true }, function (error, res, body) {
-  if (error) {
-    return console.log(error);
-  }
-  const results = body.results;
-  let count = 0;
-  for (const rs of results) {
-    for (const chr of rs.characters) {
-      if (chr.indexOf('18') > 0) {
-        count += 1;
-      }
+let count = 0;
+axios.get(process.argv[2])
+  .then(res => {
+    const films = res.data.results ? res.data.results : [];
+    const size = films.length;
+    for (let i = 0; i < size; i++) {
+      films[i].characters.forEach(chr => {
+        if (chr.includes('18')) count++;
+      });
     }
-  }
-  console.log(count);
-});
+    console.log(count);
+  })
+  .catch(err => {
+    console.log('Error:', err);
+  });
